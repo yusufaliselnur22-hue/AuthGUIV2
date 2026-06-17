@@ -1,0 +1,15 @@
+name: AuthGUI
+version: '${project.version}'
+main: com.authgui.AuthGUIPlugin
+api-version: '1.21'
+description: Inventory GUI based auth plugin
+authors: [AuthGUI]
+commands:
+  authgui:
+    description: AuthGUI main command
+    usage: /authgui reload
+    permission: authgui.admin
+permissions:
+  authgui.admin:
+    description: Access to admin commands
+    default: op

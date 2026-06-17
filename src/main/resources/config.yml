@@ -1,0 +1,89 @@
+# AuthGUI Yapılandırma Dosyası
+# Item isimlerinde renk kodu kullanmak için & işareti kullanın.
+# Örnek: "&a&lKayıt Ol" = Koyu Yeşil Kalın "Kayıt Ol"
+# Minecraft item isimleri için: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+
+# =============================================
+# GUI GENEL AYARLARI
+# =============================================
+gui:
+  # Ana menünün başlığı
+  title: "&8&l⚡ AuthGUI ⚡"
+  # Menünün satır sayısı (1-6 arası, her satır 9 slot)
+  rows: 3
+
+# =============================================
+# KAYIT OL BUTONU
+# =============================================
+register-button:
+  # Buton üzerindeki isim
+  name: "&a&l✦ Kayıt Ol"
+  # Item materyali (MINECRAFT ITEM ADI)
+  material: EMERALD
+  # Butonun slot numarası (0-26 arası, 3 satır = 27 slot)
+  slot: 11
+  # Buton altındaki açıklama satırları (lore)
+  lore:
+    - "&7Sunucuya ilk kez girdiniz!"
+    - "&7Hesap oluşturmak için tıklayın."
+    - ""
+    - "&e► Tıkla ve kayıt ol!"
+
+# =============================================
+# GİRİŞ YAP BUTONU
+# =============================================
+login-button:
+  name: "&b&l⚡ Giriş Yap"
+  material: NETHER_STAR
+  slot: 13
+  lore:
+    - "&7Hesabınız mevcut."
+    - "&7Giriş yapmak için tıklayın."
+    - ""
+    - "&e► Tıkla ve giriş yap!"
+
+# =============================================
+# DEKORASYON ITEM'I (boş slotları doldurmak için)
+# =============================================
+filler:
+  enabled: true
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# =============================================
+# MESAJLAR
+# =============================================
+messages:
+  # Önek
+  prefix: "&8[&b&lAuth&8] &r"
+
+  # Kayıt mesajları
+  register-prompt: "&aŞifrenizi girin. &7(Sohbete yazın, &c/q &7ile iptal edin)"
+  register-confirm-prompt: "&aŞifrenizi tekrar girin &7(onaylamak için):"
+  register-success: "&a&l✔ Başarıyla kayıt oldunuz! Sunucuya hoş geldiniz."
+  register-password-mismatch: "&c&l✘ Şifreler eşleşmiyor! Tekrar deneyin."
+  register-password-too-short: "&c&l✘ Şifre en az 4 karakter olmalıdır!"
+
+  # Giriş mesajları
+  login-prompt: "&aŞifrenizi girin. &7(Sohbete yazın, &c/q &7ile iptal edin)"
+  login-success: "&a&l✔ Başarıyla giriş yaptınız!"
+  login-wrong-password: "&c&l✘ Yanlış şifre! Tekrar deneyin."
+  login-too-many-attempts: "&c&l✘ Çok fazla başarısız deneme! &75 saniye bekleyin."
+
+  # Genel mesajlar
+  cancelled: "&eİşlem iptal edildi."
+  must-login: "&cOyun alanına erişmek için giriş yapmalısınız!"
+  must-login-move: "&cHareket etmek için önce giriş yapın!"
+  reload-success: "&aYapılandırma dosyası yeniden yüklendi!"
+  reload-no-permission: "&cBu komutu kullanmak için izniniz yok!"
+
+# =============================================
+# GÜVENLİK AYARLARI
+# =============================================
+security:
+  # Maksimum başarısız giriş denemesi sayısı
+  max-login-attempts: 3
+  # Çok fazla deneme sonrası bekleme süresi (saniye)
+  lockout-duration: 5
+  # Giriş ekranı timeout süresi (saniye, 0 = sınırsız)
+  login-timeout: 60
